@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>全球恐怖袭击简报 · 数据新闻</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=UnifrakturMaguntia&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css?v=15" />
+</head>
+<body>
+
+  <!-- 封面：剪贴报风格 -->
+  <section class="hero-cover" id="home" aria-label="封面">
+    <img
+      class="hero-cover__img"
+      src="index_1.png"
+      alt="Global Terror Attacks Brief — 报纸剪贴风格封面"
+      width="1920"
+      height="1080"
+      fetchpriority="high"
+    />
+    <a class="hero-cover__scroll" href="#data">进入数据版面 ↓</a>
+  </section>
+
+  <!-- 数据版面：参考 index_video 现代 broadsheet 三栏网格 -->
+  <section class="broadsheet" id="data" aria-label="数据可视化版面">
+    <div class="broadsheet__shell">
+
+      <header class="broadsheet__masthead">
+        <p class="broadsheet__date" id="edition-date"></p>
+        <h1 class="broadsheet__title">The Global Terror Brief</h1>
+        <div class="broadsheet__rule" aria-hidden="true"></div>
+        <p class="broadsheet__tagline">Investigative Data Desk · No fancy talk—just facts</p>
+        <p class="broadsheet__stat" id="edition-stat"></p>
+      </header>
+
+      <div class="broadsheet__grid">
+
+        <!-- 左栏导航 -->
+        <aside class="broadsheet__nav" aria-label="版面导航">
+          <nav class="broadsheet__nav-primary">
+            <a href="#fig-01">Map <span class="ext" aria-hidden="true">↗</span></a>
+            <a href="#fig-02">Timeline</a>
+            <a href="#fig-03">Flow</a>
+            <a href="#fig-04">Groups</a>
+            <a href="#fig-05">Region</a>
+          </nav>
+          <nav class="broadsheet__nav-secondary">
+            <a href="#fig-06">Parallel</a>
+            <a href="#fig-07">Calendar</a>
+            <a href="#home">Cover</a>
+          </nav>
+          <div class="broadsheet__nav-footer">
+            <span class="broadsheet__handle">@GlobalTerrorBrief</span>
+            <a class="broadsheet__subscribe" href="#data">■ Data Edition</a>
+          </div>
+        </aside>
+
+        <!-- 中栏主内容 -->
+        <main class="broadsheet__main">
+
+          <!-- 顶区：导语 + 配图 + 焦点 -->
+          <div class="broadsheet__top">
+            <article class="cell cell--lead">
+              <p class="cell__label">Data Journalism</p>
+              <h2 class="cell__headline">数据不会说谎，但沉默会</h2>
+              <p class="cell__deck" id="lead-deck">
+                正在加载样本数据…
+              </p>
+              <blockquote class="cell__quote">
+                <img class="cell__avatar" src="https://api.dicebear.com/7.x/notionists/svg?seed=marcus&backgroundColor=e8e6e1" alt="" width="40" height="40" />
+                <p>「Facts do not cease to exist because they are ignored.」</p>
+                <cite>— Aldous Huxley</cite>
+              </blockquote>
+              <blockquote class="cell__quote">
+                <img class="cell__avatar" src="https://api.dicebear.com/7.x/notionists/svg?seed=sun&backgroundColor=e8e6e1" alt="" width="40" height="40" />
+                <p>「The world is changed by your example, not by your opinion.」</p>
+                <cite>— Paulo Coelho</cite>
+              </blockquote>
+              <span class="cell__no">NO. 01</span>
+            </article>
+
+            <figure class="cell cell--hero-art">
+              <img
+                src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=900&q=80"
+                alt="古典油画（灰阶）"
+                width="900"
+                height="520"
+                loading="lazy"
+              />
+              <figcaption class="cell__caption">Illustration · Public domain via Unsplash</figcaption>
+            </figure>
+
+            <aside class="cell cell--spotlight">
+              <p class="cell__label">Spotlight</p>
+              <p class="cell__spotlight-quote">「You should take no action unwillingly.」</p>
+              <p class="cell__spotlight-body">
+                样本时段为 2020 年 11–12 月。向下滚动，图表随版面逐幅呈现；悬停与点击可读取叙事解读。
+              </p>
+            </aside>
+          </div>
+
+          <!-- 观点条：快速导读六图 -->
+          <div class="broadsheet__opinion" aria-label="图表导读">
+            <p class="cell__label cell__label--row">Figures</p>
+            <ul class="opinion-grid">
+              <li>
+                <img class="cell__avatar" src="https://api.dicebear.com/7.x/notionists/svg?seed=map&backgroundColor=e8e6e1" alt="" width="32" height="32" />
+                <p>全球热点散点图</p>
+                <cite>Geography</cite>
+              </li>
+              <li>
+                <img class="cell__avatar" src="https://api.dicebear.com/7.x/notionists/svg?seed=time&backgroundColor=e8e6e1" alt="" width="32" height="32" />
+                <p>年度事件与伤亡趋势</p>
+                <cite>Timeline</cite>
+              </li>
+              <li>
+                <img class="cell__avatar" src="https://api.dicebear.com/7.x/notionists/svg?seed=flow&backgroundColor=e8e6e1" alt="" width="32" height="32" />
+                <p>攻击类型→目标桑基图</p>
+                <cite>Flow</cite>
+              </li>
+              <li>
+                <img class="cell__avatar" src="https://api.dicebear.com/7.x/notionists/svg?seed=tree&backgroundColor=e8e6e1" alt="" width="32" height="32" />
+                <p>恐怖组织树图下钻</p>
+                <cite>Groups</cite>
+              </li>
+              <li>
+                <img class="cell__avatar" src="https://api.dicebear.com/7.x/notionists/svg?seed=rose&backgroundColor=e8e6e1" alt="" width="32" height="32" />
+                <p>地区玫瑰占比图</p>
+                <cite>Region</cite>
+              </li>
+              <li>
+                <img class="cell__avatar" src="https://api.dicebear.com/7.x/notionists/svg?seed=para&backgroundColor=e8e6e1" alt="" width="32" height="32" />
+                <p>平行坐标多维刷选</p>
+                <cite>Parallel</cite>
+              </li>
+              <li>
+                <img class="cell__avatar" src="https://api.dicebear.com/7.x/notionists/svg?seed=cal&backgroundColor=e8e6e1" alt="" width="32" height="32" />
+                <p>月-日 / 周度日历热力图</p>
+                <cite>Calendar</cite>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 底行摘要 -->
+          <div class="broadsheet__briefs">
+            <article class="brief">
+              <h3>地理维度</h3>
+              <p>气泡大小与颜色映射死亡人数，无坐标时按国家质心估算落点。</p>
+              <span class="brief__read">3 MIN READ</span>
+            </article>
+            <article class="brief">
+              <h3>时间维度</h3>
+              <p>日级趋势与全年日历热力：按 imonth+iday 观察纪念日、季节等周期性。</p>
+              <span class="brief__read">4 MIN READ</span>
+            </article>
+            <article class="brief">
+              <h3>关系维度</h3>
+              <p>桑基、树图与平行坐标揭示类型、组织与武器之间的结构。</p>
+              <span class="brief__read">5 MIN READ</span>
+            </article>
+          </div>
+
+          <!-- 交互图表区（预留 chart-mount 容器） -->
+          <div class="broadsheet__figures">
+
+            <article class="figure panel" id="fig-01" data-reveal>
+              <header class="figure__head">
+                <span class="figure__no">NO. 01</span>
+                <div>
+                  <p class="figure__cat">Geography</p>
+                  <h2 class="figure__title">全球袭击热点</h2>
+                  <p class="figure__desc">经纬度散点；气泡映射死亡；底部细线色带表强度。</p>
+                </div>
+              </header>
+              <p class="figure__narrative" id="narrative-map">加载图表与解读…</p>
+              <div class="figure__chart">
+                <div class="chart-mount chart-mount--wide" id="chart-map" data-placeholder="chart-map" role="img" aria-label="地理分布图"></div>
+              </div>
+            </article>
+
+            <article class="figure panel" id="fig-02" data-reveal>
+              <header class="figure__head">
+                <span class="figure__no">NO. 02</span>
+                <div>
+                  <p class="figure__cat">Timeline</p>
+                  <h2 class="figure__title">时间趋势</h2>
+                  <p class="figure__desc">柱：每日事件数；线：每日死亡人数。拖底部滑块或滚轮缩放。</p>
+                </div>
+              </header>
+              <p class="figure__narrative" id="narrative-timeline">加载图表与解读…</p>
+              <div class="figure__chart">
+                <div class="chart-mount" id="chart-timeline" data-placeholder="chart-timeline" role="img" aria-label="时间趋势双轴图"></div>
+              </div>
+            </article>
+
+            <article class="figure panel" id="fig-03" data-reveal>
+              <header class="figure__head">
+                <span class="figure__no">NO. 03</span>
+                <div>
+                  <p class="figure__cat">Flow</p>
+                  <h2 class="figure__title">袭击流向</h2>
+                  <p class="figure__desc">桑基图：攻击类型 → 目标类型，带宽表示事件量。</p>
+                </div>
+              </header>
+              <p class="figure__narrative" id="narrative-sankey">加载图表与解读…</p>
+              <div class="figure__chart">
+                <div class="chart-mount" id="chart-sankey" data-placeholder="chart-sankey" role="img" aria-label="桑基图"></div>
+              </div>
+            </article>
+
+            <article class="figure panel" id="fig-04" data-reveal>
+              <header class="figure__head">
+                <span class="figure__no">NO. 04</span>
+                <div>
+                  <p class="figure__cat">Organizations</p>
+                  <h2 class="figure__title">恐怖组织</h2>
+                  <p class="figure__desc">树图：面积=次数，颜色=死亡；可下钻武器类型。</p>
+                </div>
+              </header>
+              <p class="figure__narrative" id="narrative-treemap">加载图表与解读…</p>
+              <div class="figure__chart">
+                <div class="chart-mount" id="chart-treemap" data-placeholder="chart-treemap" role="img" aria-label="组织树图"></div>
+              </div>
+            </article>
+
+            <article class="figure panel" id="fig-05" data-reveal>
+              <header class="figure__head">
+                <span class="figure__no">NO. 05</span>
+                <div>
+                  <p class="figure__cat">Region</p>
+                  <h2 class="figure__title">地区分布</h2>
+                  <p class="figure__desc">世界地图打点：圆点大小 = 该国袭击次数。</p>
+                </div>
+              </header>
+              <p class="figure__narrative" id="narrative-region">加载图表与解读…</p>
+              <div class="figure__chart">
+                <div class="chart-mount" id="chart-region" data-placeholder="chart-region" role="img" aria-label="地区玫瑰图"></div>
+              </div>
+            </article>
+
+            <article class="figure panel" id="fig-06" data-reveal>
+              <header class="figure__head">
+                <span class="figure__no">NO. 06</span>
+                <div>
+                  <p class="figure__cat">Multivariate</p>
+                  <h2 class="figure__title">多维关联</h2>
+                  <p class="figure__desc">平行坐标：武器、区域、袭击类型、死亡区间与责任方（悬停高亮）。</p>
+                </div>
+              </header>
+              <p class="figure__narrative" id="narrative-parallel">加载图表与解读…</p>
+              <div class="figure__chart">
+                <div class="chart-mount chart-mount--tall" id="chart-parallel" data-placeholder="chart-parallel" role="img" aria-label="平行坐标图"></div>
+              </div>
+            </article>
+
+            <article class="figure panel" id="fig-07" data-reveal>
+              <header class="figure__head">
+                <span class="figure__no">NO. 07</span>
+                <div>
+                  <p class="figure__cat">Calendar</p>
+                  <h2 class="figure__title">袭击周期日历</h2>
+                  <p class="figure__desc">样本期内逐日日历热力 + 有数据 ISO 周网格；悬停/点击读详情。</p>
+                </div>
+              </header>
+              <p class="figure__narrative" id="narrative-calendar">加载图表与解读…</p>
+              <div class="figure__chart">
+                <div class="chart-mount chart-mount--calendar" id="chart-calendar" data-placeholder="chart-calendar" role="img" aria-label="月度周度日历热力图"></div>
+              </div>
+            </article>
+          </div>
+
+          <footer class="broadsheet__end">
+            <p>700 Events · 2020 Sample · ECharts · 7 Figures</p>
+            <a href="#home">Back to cover ↑</a>
+          </footer>
+        </main>
+
+        <!-- 右栏精选 -->
+        <aside class="broadsheet__rail" aria-label="精选图表">
+          <header class="rail__head">
+            <h2>Featured Figures</h2>
+            <a href="#fig-01" class="rail__see-all">● See All</a>
+          </header>
+
+          <article class="rail-card">
+            <a class="rail-card__more" href="#fig-01">↳ See More</a>
+            <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=400&q=80" alt="" width="400" height="240" loading="lazy" />
+            <h3><a href="#fig-01">全球袭击热点分布</a></h3>
+            <p class="rail-card__meta"><span>by Data Desk</span><span>3 min read</span></p>
+            <p class="rail-card__sum">世界地图散点，气泡映射伤亡规模，一眼识别高危地带。</p>
+          </article>
+
+          <article class="rail-card">
+            <a class="rail-card__more" href="#fig-02">↳ See More</a>
+            <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=400&q=80" alt="" width="400" height="240" loading="lazy" />
+            <h3><a href="#fig-02">二十年袭击时间线</a></h3>
+            <p class="rail-card__meta"><span>by Data Desk</span><span>4 min read</span></p>
+            <p class="rail-card__sum">双轴图对比事件频次与伤亡走势，拖拽缩放细读每一年。</p>
+          </article>
+
+          <article class="rail-card">
+            <a class="rail-card__more" href="#fig-03">↳ See More</a>
+            <img src="https://images.unsplash.com/photo-1578301978693-9b61f0a06f9e?w=400&q=80" alt="" width="400" height="240" loading="lazy" />
+            <h3><a href="#fig-03">攻击—目标流向</a></h3>
+            <p class="rail-card__meta"><span>by Data Desk</span><span>3 min read</span></p>
+            <p class="rail-card__sum">桑基图展示袭击类型如何流向不同目标类别。</p>
+          </article>
+
+          <article class="rail-card">
+            <a class="rail-card__more" href="#fig-04">↳ See More</a>
+            <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400&q=80" alt="" width="400" height="240" loading="lazy" />
+            <h3><a href="#fig-04">组织与武器结构</a></h3>
+            <p class="rail-card__meta"><span>by Data Desk</span><span>5 min read</span></p>
+            <p class="rail-card__sum">矩形树图按组织聚合，点击下钻至武器类型分布。</p>
+          </article>
+        </aside>
+      </div>
+    </div>
+
+    <div class="broadsheet__ticker" aria-hidden="true">
+      <div class="broadsheet__ticker-track">
+        <span>GLOBAL TERROR ATTACKS BRIEF — DATA JOURNALISM — NO FANCY TALK, JUST FACTS — GALLERY ● NOW IN —&nbsp;</span>
+        <span>GLOBAL TERROR ATTACKS BRIEF — DATA JOURNALISM — NO FANCY TALK, JUST FACTS — GALLERY ● NOW IN —&nbsp;</span>
+      </div>
+    </div>
+  </section>
+
+  <script src="libs/echarts.min.js"></script>
+  <script>
+    if (!window.echarts) {
+      document.write('<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"><\/script>');
+    }
+  </script>
+  <script src="js/data-parser.js?v=9"></script>
+  <script src="js/terror-data.js"></script>
+  <script src="js/world-geo-data.js"></script>
+  <script src="js/world-map-loader.js?v=9"></script>
+  <script src="js/reveal.js?v=10" defer></script>
+  <script src="js/charts.js?v=16" defer></script>
+  <script>
+    (function () {
+      var el = document.getElementById('edition-date');
+      if (el) {
+        el.textContent = new Date().toLocaleDateString('zh-CN', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
